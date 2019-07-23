@@ -1,0 +1,72 @@
+body {
+	margin: 0
+}
+header {
+	width: 100%;
+	height: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+
+	
+}
+.container {
+	width: 95%;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+
+}
+	.logo {
+		width: 25%;
+		height: 100%;
+		background-color: blue;
+	}
+		#lg {
+			object-fit: cover;
+			width: 100%;
+          	height: 100%;
+		}
+	.banner {
+		width: 55%;
+		height: 100%;
+		background-color: green;
+	}
+		
+		
+		#ba {
+			object-fit: cover;
+			width: 100%;
+          	height: 100%;
+		}
+main {
+	width: 100%;
+	height: auto;
+	
+}
+	ul {
+		width: 100%;
+		height: 2vw;
+		background-color: #414141;
+		margin-top: 0;
+		list-style-type: none;
+		display: flex;
+		padding-top: 0.5%;
+		font-size: 1vw;
+	}
+		li {
+			color: white;
+			font-family: arial;
+		}
+	.headline {
+		height: 3vw;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+		#line {
+			height: auto;
+			width: auto;
+		}
+
