@@ -70,3 +70,21 @@ main {
 			width: auto;
 		}
 
+.Box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+.Box div{
+		width: 30%
+
+}
+
+.Box div img{
+	width: 70%
+}
+.Box p{
+	font-size: 1vw;
+}
+

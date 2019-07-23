@@ -29,8 +29,108 @@
 			<h1>Our Cars</h1>
 			</div>
 		</div>
+
+		<div class="Box">
+			
+			<div>
+				<img src="img/jaguar.jpg">
+				<p id="0"> </p>
+			</div>
+
+			<div>
+				<img src="img/bmw.jpg">
+				<p id="1"></p>
+			</div>
+
+			<div>
+				<img src="img/koenigsegg.jpg">
+				<p id="2"></p>
+			</div>
+
+			<div>
+				<img src="img/macan.jpg">
+				<p id=3></p>
+			</div>
+
+			<div>
+				<img src="img/pagani.jpg">
+				<p id="4"></p>
+			</div>
+
+			<div>
+				<img src="img/mercedessold.jpg">
+				<p id="5"></p>
+			</div>
+
+			<div>
+				<img src="img/rimac.jpg">
+				<p id="6"></p>
+			</div>
+
+			<div>
+				<img src="img/rolls.jpg">
+				<p id="7"></p>
+			</div>
+
+			<div>
+				<img src="img/tesla.png">
+				<p id="8"></p>
+			</div>
+		</div>
 		
 	</main>
+
+
+
+
+	<script>
+		
+class Car{
+
+	constructor(name,prize,sold,){
+
+		this.name = name;
+		this.prize = prize;
+		this.sold = sold;
+	}
+
+
+
+
+
+
+}
+
+var jaguar = new Car("Jaguar",30000,false);
+var koenigsegg = new Car("koenigsegg",1300000,false);
+var bmw = new Car("Bmw i8", 120000,false);
+var mercedes = new Car("Mercedes",100000,true);
+var macan = new Car("Macan",70000,false);
+var rimac = new Car("Concept One",999999,false);
+var rolls = new Car("Rolls royce",300000,false);
+var pagani = new Car("Pagani",700000,false);
+var tesla = new Car("Tesla",100000,false);
+
+var array =[
+	jaguar,bmw,koenigsegg,macan,pagani,mercedes,rimac,rolls,tesla];
+
+	for (var i = 0; i <array.length; i++) {
+
+		document.getElementById(i).innerHTML = array[i].sold==false ? "The car is <b>available </b> <br> " +"This is a " + array[i].name + "<br>"+ " This car costs " + array[i].prize + " $" :
+			 "The car is <b>sold</b> <br>" +"This  car is " + array[i].name+  "<br>"+ " This car costs " + array[i].prize + " $";
+	}
+
+
+		for (var i = 0; i <array.length; i++) {
+
+			var image = document.getElementById(i);
+			image.addEventListener("click",calculateinsurance,false);
+		}
+
+	
+
+
+	</script>
 
 </body>
 </html>
