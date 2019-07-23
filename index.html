@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+</head>
+<body>
+<script>
+	
+
+	var car = {
+		 name: "Audi",
+		 model: "A6",
+		 makeYear: 2016,
+		 fuelType: "Diesel",
+		 color: "Red",
+
+		color_and_model: function(){
+			return this.model + " " + this.color
+		} 
+	}
+
+	console.log(car.model);
+	console.log(car.color_and_model());
+
+	function Car(name,model,makeYear,fuelType,color) {
+
+		this.name = name,
+		this.model = model,
+		this.makeYear = makeYear,
+		this.fuelType = fuelType,
+		this.color = color
+
+		}
+		Car.prototype.color_and_model = function(){
+			return this.model + " " + this.color };
+
+var auto_eins =  new Car("Lamborghini","Gallardo",2008,"Petrol","Orange");
+var auto_zwei = new Car("BMW","M4",2016,"Diesel","Black");
+var auto_drei =  new Car("Dacia","Duster",2012,"Diesel","Brown");
+var auto_vier =  new Car("Toyota","Land Crusier", 2016,"Diesel","Gray");
+var auto_funf = new Car("Mazda","Six",2012,"Diesel","Blue");
+
+
+console.log(auto_zwei.makeYear);
+console.log(auto_funf.color_and_model());
+
+
+
+
+class Car1{
+
+
+constructor(name,model,makeYear,fuelType,color) {
+
+		this.name = name,
+		this.model = model,
+		this.makeYear = makeYear,
+		this.fuelType = fuelType,
+		this.color = color
+
+		}
+
+
+ color_and_model(){
+ return this.model + " " + this.color
+};
+
+}
+
+var auto = new Car1("Tesla","80D",2016,"Elektro","Blue");
+auto.spoiler = true;
+
+
+console.log(auto.color_and_model());
+console.log(auto.spoiler);
+
+
+
+
+</script>
+</body>
+</html>
