@@ -31,55 +31,112 @@
 		</div>
 
 		<div class="Box">
-			
-			<div>
+			<div class="small" id="a">
 				<img src="img/jaguar.jpg">
 				<p id="0"> </p>
 			</div>
+			<div class="BIG" id="b">
+				<img src="img/jaguar.jpg">
+				<p id="20"> </p>
+			</div>
 
-			<div>
+
+
+			<div class="small" id="aa">
 				<img src="img/bmw.jpg">
 				<p id="1"></p>
 			</div>
+			<div class ="BIG" id="bb">
+				<img src="img/bmw.jpg">
+				<p id="19"></p>				
+			</div>
 
-			<div>
+			
+
+
+			<div class="small" id="aaa">
 				<img src="img/koenigsegg.jpg">
 				<p id="2"></p>
 			</div>
+			<div class="BIG" id="bbb">
+				<img src="img/koenigsegg.jpg">
+				<p id="18"></p>				
+			</div>
 
-			<div>
+
+			<div class="small" id="aaaa">
 				<img src="img/macan.jpg">
 				<p id=3></p>
 			</div>
+			<div class="BIG" id="bbbb">
+				<img src="img/macan.jpg">
+				<p id=17></p>
+			</div>
 
-			<div>
+
+
+
+			<div class="small" id="aaaaa">
 				<img src="img/pagani.jpg">
 				<p id="4"></p>
 			</div>
+			<div class="BIG" id="bbbbb">
+				<img src="img/pagani.jpg">
+				<p id="16"></p>
+			</div>
 
-			<div>
+		
+
+
+			<div class="small" id="aaaaaa">
 				<img src="img/mercedessold.jpg">
 				<p id="5"></p>
 			</div>
+			<div class = "BIG" id="bbbbbb">
+				<img src="img/mercedessold.jpg">
+				<p id="15"></p>
+			</div>
 
-			<div>
+
+
+
+
+
+			<div class="small" id="aaaaaaa">
 				<img src="img/rimac.jpg">
 				<p id="6"></p>
 			</div>
+			<div class="BIG" id="bbbbbbb">
+				<img src="img/rimac.jpg">
+				<p id="14"></p>
+			</div>
 
-			<div>
+
+
+			<div class="small" id="aaaaaaaa">
 				<img src="img/rolls.jpg">
 				<p id="7"></p>
 			</div>
+			<div class="BIG" id="bbbbbbbb">
+				<img src="img/rolls.jpg">
+				<p id="13"></p>
+			</div>
 
-			<div>
+
+
+			<div class="small" id="aaaaaaaaa">
 				<img src="img/tesla.png">
 				<p id="8"></p>
 			</div>
+			<div class="BIG" id="bbbbbbbbb">
+				<img src="img/tesla.png">
+				<p id="12"></p>
+			</div>
 		</div>
+
+
 		
 	</main>
-
 
 
 
@@ -114,20 +171,102 @@ var tesla = new Car("Tesla",100000,false);
 var array =[
 	jaguar,bmw,koenigsegg,macan,pagani,mercedes,rimac,rolls,tesla];
 
-	for (var i = 0; i <array.length; i++) {
+	for (var i = 0, j=20; i<array.length; i++,j--) {
 
 		document.getElementById(i).innerHTML = array[i].sold==false ? "The car is <b>available </b> <br> " +"This is a " + array[i].name + "<br>"+ " This car costs " + array[i].prize + " $" :
+
+
+			 "The car is <b>sold</b> <br>" +"This  car is " + array[i].name+  "<br>"+ " This car costs " + array[i].prize + " $";
+
+
+		document.getElementById(j).innerHTML = array[i].sold==false ? "The car is <b>available </b> <br> " +"This is a " + array[i].name + "<br>"+ " This car costs " + array[i].prize + " $" :
+
+
 			 "The car is <b>sold</b> <br>" +"This  car is " + array[i].name+  "<br>"+ " This car costs " + array[i].prize + " $";
 	}
 
 
-		for (var i = 0; i <array.length; i++) {
+	function hide(j,z){
+	var x = document.getElementById(j);
+	var y = document.getElementById(z);
+	 if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
 
-			var image = document.getElementById(i);
-			image.addEventListener("click",calculateinsurance,false);
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+
+
+var z = "b";
+
+		for (var i = 0, j = "a", z = "b"; i <array.length; i++) {
+			var x = document.getElementById(j);
+			x.addEventListener("click",hide(this.j,this.z),false);
+			console.log(j + "\n");
+			console.log(z+"\n");
+			j+="a";
+			z+="b";
+}
+
+		for (var i = 0, j = "a",z = "b"; i <array.length; i++) {
+			var x = document.getElementById(z);
+			x.addEventListener("click",hide2,false);
+			z+="b";
+
+} 
+/*var count = 2;
+var a = ["a"];
+var b = ["b"];
+var c="a";
+var d="b";
+
+for (var i =1; i <10; i++) {
+		for (var i =1; i < count; i++) {
+			c+="a";
+			d+="b";
 		}
+		a.push(c);
+		b.push(d);
+	c="a";
+	d="b";
+	count+=1;
 
-	
+}
+console.log(a);
+console.log(b);
+
+
+var eventsa =new Array;
+var eventsb = new Array;
+
+for (var i =0; i<array.length; i++) {
+var x = document.getElementById(a[i]);
+eventsa.push(x);
+var y = document.getElementById(b[i]);
+eventsb.push(y)
+}
+console.log(eventsb);
+console.log(eventsa);
+
+for (var i =0; i < eventsb.length; i++) {
+	var change = eventsa[i];
+	change.addEventListener("click",function(){
+	var x = document.getElementById(a[i]);
+	var y =document.getElementById(b[i]);
+	 if (x.style.display == "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+});
+}
+*/
 
 
 	</script>
